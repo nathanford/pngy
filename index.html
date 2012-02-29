@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+<meta charset=utf-8 />
+<meta name="author" content="Nathan Ford" />
+<meta name="description" content="CSS Game Test" />
+
+<title>pngy</title>
+
+<link href="./css/main.css" rel="stylesheet" />
+
+<script src="./js/jquery.js"></script>
+<script src="./js/pngy.js"></script>
+
+</head>
+<body id="index">
+
+	<div class="wrapper">
+		
+		<h1>pngy</h1>
+		
+		<h2 id="pingspeed">Ping Speed: <b></b></h2>
+		
+		<br><br>
+		
+		<p>&lt;img&gt;</p>
+		<img class="pngy" src="img/saxmax-sm.jpg" />
+		
+		<br><br>
+		
+		<p>background-image</p>
+		<div class="pngy" style="background-image: url(img/saxmax-sm.jpg); height: 667px;">
+		
+		</div>
+		
+	</div>
+
+<script>
+
+	$(function () {
+	
+		pngy({ 
+			file: './img/1k.gif',
+			avg_limit: 3,
+			selector: '.ping',
+			display_results: '#pingspeed b',
+			limits: {
+				fastest: 80,
+				fast: 180,
+				normal: 300,
+				slow: 'all'
+			},
+			apply_to_all_imgs: true
+		});
+		
+	
+	});
+
+</script>
+
+	
+</body>
+</html>

@@ -1,0 +1,52 @@
+Pngy documentation
+
+Pngy is a bit of Javascript that allows you to load images of different file sizes based on the user’s current connection speed. So, if the connection is slow, pngy will load your small image. If its fast, it can load a hi-res image.
+
+In your HTML, just put the path to the smallest image as the src or background-image of any appropriate element. On DOM-ready, Pngy will load a test image (1k.gif, or whatever you want to use) a defined amount of times and average the speed at which it loaded. From this, it will determine a connection speed and load the appropriate replacement image. When it has been loaded, it will be displayed on the page.
+
+Pngy relies on jQuery for now because I am too lazy right now to convert it to regular JS (but will do soon). So, anywhere in your JS or HTML file that you want to apply Pngy, just add this line within a DOM-ready function:
+
+	pngy();
+
+I have tried to build this to be as customizable as possible. Here are your options:
+
+*Global Options*
+
+	Option__			Description__								Default__
+
+	file				The path to the test file.					'1k.gif'
+
+	avg_limit			Number of times to load test file.			3
+
+	selector			Which elements do you want pngy on?			'.pngy'
+
+	display_results		Selector for element to display 			false
+					speed results
+					
+*Limits*
+
+A limit in Pngy is the top threshold (number) of a defined speed. So, for “normal”, the limit is 280, which is the speed result above which the speed would no longer be “normal“. You can set whatever thresholds and speed names that you like. Here are the defaults:
+
+	fast: 180,
+	normal: 300,
+	slow: 'all'
+
+You write limits in Pngy like so:
+
+	pngy({
+		limits: {
+			fast: 180,
+			normal: 300,
+			slow: 'all'
+		}
+	});
+
+Use 'all' for your slowest speed, so that if the connection is slow no higher-res images will be loaded. 'all' is basically your catch-all for anything that is not “fast” or “normal” in the example above.
+
+*Details*
+
+Pngy was created by Nathan Ford. Feel free to interrupt him any time with questions, concerns, complaints, etc.
+
+nathan@artequalswork.com
+@nathan_ford on Twitter
+

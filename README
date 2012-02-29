@@ -49,6 +49,10 @@ You write limits in Pngy like so:
 
 Use 'all' for your slowest speed, so that if the connection is slow no higher-res images will be loaded. 'all' is basically your catch-all for anything that is not “fast” or “normal” in the example above.
 
+*Image Naming*
+
+To make Pngy work with your images, you just need to name them based on the corresponding limits key, preceded by a '-' (dash). So, your 'fast' image becomes 'whatever-fast.jpg'. I am looking at how to quickly make sure that the image exists on the server before replacing anything. Any suggestions would be welcome.
+
 *Example Implementation*
 
 	$(function () {

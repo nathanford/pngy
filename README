@@ -12,17 +12,17 @@ I have tried to build this to be as customizable as possible. Here are your opti
 
 *Global Options*
 
-Option			Description						Default
+Option			Description					Default
 
-file			The path to the test file.				'1k.gif'
+file			The path to the test file. - File path		'1k.gif'
 
-avg_limit		Number of times to load test file.			3
+avg_limit		Number of times to load test file. - Number	3
 
-selector		Which elements do you want pngy on?			'.pngy'
+selector		Which elements do you want pngy on? - Selector	'.pngy'
 
-display_results		Selector for element to display speed results.		false
+display_results		Element to display speed results. - Selector	false
 
-apply_to_all_imgs	Apply pngy to all IMG tags. True/False			false
+apply_to_all_imgs	Apply pngy to all IMG tags. - True/False	false
 
 					
 *Limits*

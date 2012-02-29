@@ -1,4 +1,4 @@
-// pngy by Nathan Ford - pngy.artequalswork.com
+// Pngy by Nathan Ford - pngy.artequalswork.com
 
 pngy = function (ob) {
 	
@@ -84,7 +84,7 @@ results = function ( p ) {
 
 appendimgs = function (p) {
 	
-	var s = p.speed, j = 0, reg = new RegExp("((\-.+)*\.([A-Za-z]{3,4})\"*)$");
+	var s = p.speed, j = 0, reg = new RegExp("((\-[^\-]+)\.([A-Za-z]{3,4})\"*)$");
 	
 	while( p.imgs[j] ) {
 		

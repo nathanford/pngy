@@ -1,6 +1,6 @@
 Pngy documentation
 
-Pngy is a bit of jQuery that allows you to load images of different file sizes based on the user’s current connection speed. So, if the connection is slow, pngy will load your small image. If its fast, it can load a hi-res image.
+Pngy is a bit of jQuery that allows you to load images of different file sizes based on the user’s current connection speed. So, if the connection is slow, pngy will load your small image. If its fast, it can load a hi-res image. It’s kinda like a ping test in Javascript.
 
 *Note* Pngy does not seem to want to run locally right now. Upload to a server to test the files.
 
@@ -18,7 +18,7 @@ Option			Description					Default
 
 file			The path to the test file. - File path		'1k.gif'
 
-avg_limit		Number of times to load test file. - Number	3
+test_repeat		Number of times to load test file. - Number	3
 
 selector		Which elements do you want pngy on? - Selector	'.pngy'
 
@@ -26,6 +26,8 @@ display_results		Element to display speed results. - Selector	false
 
 apply_to_all_imgs	Apply pngy to all IMG tags. - True/False	false
 
+
+*Note* The higher test_repeat is, the slower the overall response time of the script.
 					
 *Limits*
 
@@ -46,6 +48,23 @@ You write limits in Pngy like so:
 	});
 
 Use 'all' for your slowest speed, so that if the connection is slow no higher-res images will be loaded. 'all' is basically your catch-all for anything that is not “fast” or “normal” in the example above.
+
+*Example Implementation*
+
+	$(function () {
+
+		pngy({
+			file: '/images/1k.gif',
+			selector: '.pngy', // for backgrounds
+			apply_to_all_imgs: true, // for IMG tags
+			limits: {
+				fast: 250,
+				normal: 350,
+				slow: 'all'
+			}
+		});
+
+	});
 
 *Details*
 

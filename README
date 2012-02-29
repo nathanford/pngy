@@ -1,6 +1,6 @@
 Pngy documentation
 
-Pngy is a bit of Javascript that allows you to load images of different file sizes based on the user’s current connection speed. So, if the connection is slow, pngy will load your small image. If its fast, it can load a hi-res image.
+Pngy is a bit of jQuery that allows you to load images of different file sizes based on the user’s current connection speed. So, if the connection is slow, pngy will load your small image. If its fast, it can load a hi-res image.
 
 In your HTML, just put the path to the smallest image as the src or background-image of any appropriate element. On DOM-ready, Pngy will load a test image (1k.gif, or whatever you want to use) a defined amount of times and average the speed at which it loaded. From this, it will determine a connection speed and load the appropriate replacement image. When it has been loaded, it will be displayed on the page.
 
@@ -12,16 +12,18 @@ I have tried to build this to be as customizable as possible. Here are your opti
 
 *Global Options*
 
-	Option__			Description__								Default__
+	Option			Description						Default
 
-	file				The path to the test file.					'1k.gif'
+	file			The path to the test file.				'1k.gif'
 
-	avg_limit			Number of times to load test file.			3
+	avg_limit		Number of times to load test file.			3
 
-	selector			Which elements do you want pngy on?			'.pngy'
+	selector		Which elements do you want pngy on?			'.pngy'
 
-	display_results		Selector for element to display 			false
-					speed results
+	display_results		Selector for element to display speed results.		false
+
+	apply_to_all_imgs	Apply pngy to all IMG tags. True/False			false
+
 					
 *Limits*
 

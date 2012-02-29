@@ -9,7 +9,7 @@ pngy = function (ob) {
 	},	
 	p = {
 		file : (ob && ob.file != undefined) ? ob.file : '1k.gif',
-		avg_limit : (ob && ob.avg_limit != undefined) ? ob.avg_limit : 3,
+		test_repeat : (ob && ob.test_repeat != undefined) ? ob.test_repeat : 3,
 		selector : (ob && ob.selector != undefined) ? ob.selector : '.pngy',
 		display_results: (ob && ob.display_results != undefined) ? ob.display_results : false,
 		limits : (ob && ob.limits != undefined) ? ob.limits : defaults,
@@ -41,12 +41,12 @@ results = function ( p ) {
 				
 				p.i++;
 				
-				if (p.i < p.avg_limit) results( p );
+				if (p.i < p.test_repeat) results( p );
 				else {
 				
 					if (p.nm != 0) { 
 						
-						p.avg = Math.round(p.nm / p.avg_limit); 
+						p.avg = Math.round(p.nm / p.test_repeat); 
 						
 						for (k in p.limits) {
 							

@@ -8,6 +8,12 @@
 <title>Pngy</title>
 
 <style>
+
+body {
+	font-family: "Helvtica Neue", Arial, Helvetica, sans-serif;
+	line-height: 1.3em;	
+}
+
 img {
 	max-width: 100%;
 	width: 100%;
@@ -40,11 +46,17 @@ h1 {
 h2 {
 	font-size: 18px;
 	font-weight: 400;
+	margin-bottom: 20px;
 }
 
 p {
 	font-size: 16px;
 }
+
+.pngy {
+	margin-bottom: 40px;
+}
+
 </style>
 
 <script src="./js/jquery.js"></script>
@@ -59,15 +71,11 @@ p {
 		
 		<h2 id="pingspeed">Ping Speed: <b></b></h2>
 		
-		<br><br>
+		<p><em>IMG example</em></p>
+		<img class="pngy" src="./img/saxmax-sm.jpg" />
 		
-		<p>&lt;img&gt;</p>
-		<img class="pngy" src="img/saxmax-sm.jpg" />
-		
-		<br><br>
-		
-		<p>background-image</p>
-		<div class="pngy" style="background-image: url(img/saxmax-sm.jpg); height: 667px;"></div>
+		<p><em>background-image example</em></p>
+		<div class="pngy" style="background-image: url(./img/saxmax-sm.jpg); height: 667px;"></div>
 		
 	</div>
 
@@ -78,7 +86,7 @@ p {
 		pngy({ 
 			file: './img/1k.gif',
 			avg_limit: 3,
-			selector: '.ping',
+			selector: '.pngy',
 			display_results: '#pingspeed b',
 			limits: {
 				fastest: 80,
@@ -91,7 +99,7 @@ p {
 		
 	
 	});
-
+	
 </script>
 
 	

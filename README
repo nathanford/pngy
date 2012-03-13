@@ -4,7 +4,9 @@ Pngy is a bit of jQuery that allows you to load images of different file sizes b
 
 *Note* Pngy does not seem to want to run locally right now. Upload to a server to test the files.
 
-In your HTML, just put the path to the smallest image as the src or background-image of any appropriate element. On DOM-ready, Pngy will use an AJAX test load the first image or background-image on your page (defined in the selector option), and determine the user’s load speed. This speed will not reflect the user’s connection speed, as their connection, the server’s latency, the browser’s compression settings, and the device’s processing speed all are factors in delivering an image. Therefore, in loading the image, we can only look at the aggregate load time from all these factors. This does, though, map directly to what all the images on your page will go through, and the new process only adds one extra HTTP request.
+In your HTML, just put the path to the smallest image as the src or background-image of any appropriate element. Pngy will use AJAX to test load the first image or background-image on your page (defined in the 'selector' option), and determine the user’s load speed. 
+
+This speed will not reflect the user’s connection speed, as their connection, the server’s latency, the browser’s compression settings, and the device’s processing speed all are factors in delivering an image. Therefore, in loading the image, we can only look at the aggregate load time from all these factors. This does, though, map directly to what all the images on your page will go through, and the new process only adds one extra HTTP request.
 
 Pngy relies on jQuery for now because I am too lazy to convert it to regular JS (but will do soon). To start pngy, just add this line of JS to the bottom of your HTML:
 

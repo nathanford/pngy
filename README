@@ -85,6 +85,7 @@ To make Pngy work with your images, you just need to name them based on the corr
 * Pngy uses the first image that is found by the 'selector' option to test loading speed. No need for a test image (previously 1k.gif) or it’s path.
 * Combined it all to one function to better contain variables.
 * Pngy now calculates Kilobytes per second to measure speed.
+* Added a minimized version.
 
 *Details*
 

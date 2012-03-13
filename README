@@ -1,6 +1,6 @@
 Pngy 2.0 documentation
 
-Pngy is a bit of jQuery that allows you to load images of different file sizes based on a page’s load speed. So, if the load speed is slow, pngy can load your small image. If it’s fast, it can load a hi-res image. It’s kinda like a ping test in Javascript.
+Pngy is a bit of jQuery that allows you to load images of different file sizes based on a page’s load speed. So, if the load speed is slow, Pngy can load your small image. If it’s fast, it can load a hi-res image. It’s kinda like a ping test in Javascript.
 
 *Note* Pngy does not seem to want to run locally right now. Upload to a server to test the files.
 

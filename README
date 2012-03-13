@@ -29,10 +29,10 @@ apply_to_all_imgs	Apply pngy to all IMG tags. - True/False	false
 					
 *Limits*
 
-A limit in Pngy is the top threshold (number) of a defined speed. So, for “normal”, the limit is 280, which is the speed result above which the speed would no longer be “normal“. You can set whatever thresholds and speed names that you like. Here are the defaults:
+A limit in Pngy is the top threshold (number) of a defined speed (in Kbs). So, for “normal”, the limit is 280, which is the speed result above which the speed would no longer be “normal“. You can set whatever thresholds and speed names that you like. Here are the defaults:
 
-	fast: 40,
-	normal: 10,
+	fast: 40, // (kbs)
+	normal: 10, // (kbs)
 	slow: 0
 
 You write limits in Pngy like so:

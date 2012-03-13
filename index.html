@@ -69,35 +69,20 @@ p {
 		
 		<h1>Pngy</h1>
 		
-		<h2 id="pingspeed">Ping Speed: <b></b></h2>
+		<h2 id="pingspeed">Load Speed: <b></b></h2>
 		
 		<p><em>IMG example</em></p>
-		<img class="pngy" src="./img/saxmax-sm.jpg" />
+		<img class="pngy" src="./img/saxmax-slow.jpg" />
 		
 		<p><em>background-image example</em></p>
-		<div class="pngy" style="background-image: url(./img/saxmax-sm.jpg); height: 667px;"></div>
+		<div class="pngy" style="background-image: url(./img/saxmax-slow.jpg); height: 667px;"></div>
 		
 	</div>
 
 <script>
-
-	$(function () {
 	
-		pngy({ 
-			file: './img/1k.gif',
-			avg_limit: 3,
-			selector: '.pngy',
-			display_results: '#pingspeed b',
-			limits: {
-				fastest: 80,
-				fast: 180,
-				normal: 300,
-				slow: 'all'
-			},
-			apply_to_all_imgs: true
-		});
-		
-	
+	pngy({ 
+		display_results: '#pingspeed b'
 	});
 	
 </script>
